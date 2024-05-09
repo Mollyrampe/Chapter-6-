@@ -1,7 +1,7 @@
 /*
-Author:
-Date:
-File Name: 
+Author: Molly Rampe
+Date: May 9th, 2024 
+File Name: apply.css
 */
 
 /* CSS Reset */
@@ -44,4 +44,28 @@ footer {
 	font-size: .70em;
 	text-align: center;
     color: #341509;
+}
+
+ /* Media Query for Tablet Viewport */
+ @media screen and (min-width: 481px) {
+    article {
+    width: 43%;
+    float: left;
+    height: 160px;
+    }
+    }
+    footer {
+        clear: left;
+    }
+
+/* Media Query for Desktop Viewport */
+@media screen and (min-width: 900px) {
+article {
+width: 27%;
+height: 140px;
+}
+}
+article:hover {
+    background-color: #ffe5dc;
+    color: #a22c02;
 }

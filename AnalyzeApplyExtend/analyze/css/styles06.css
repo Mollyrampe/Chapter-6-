@@ -1,7 +1,7 @@
 /*
-    Student Name
-	File Name: 
-	Current Date: 
+    Student Name: Molly Rampe 
+	File Name: analyze.css
+	Current Date: May 9th, 2024
 */
 
 /* CSS reset */
@@ -13,7 +13,8 @@ body, header, nav, main, footer, img, h1, h3, ul {
 
 /* Style rule for body and images */
 body {
-    background-color: #e5e0fa;
+    background: linear-gradient(to 
+    bottom, #e5e0fa, #29157e);
 }
 
 img {
@@ -21,18 +22,11 @@ img {
     display: block;
 }
 
-/* Styles for Mobile Layout */
-
-/* Hide tablet-desktop content */
-    .tablet-desktop {
-        display: none;
-    }
-
 /* Style rule for the header */
 header {
-	padding: 2%;
-	color: #110934;
-	text-align: center;
+    padding: 2%;
+    color: #110934;
+    text-align: center;
 }
 
 /* Style rules for navigation area */
@@ -59,34 +53,40 @@ nav li a {
 
 /* Style rules for the main content  */
 main {
-	display: block;
-	font-family: Georgia, "Times New Roman", sans-serif;
-	font-size: 1em;
-	padding: 1em;
-	background-color: #FFFFFF;
-	border-top: solid 0.2em #110934; 
-	border-bottom: solid 0.2em #110934;
+    display: block;
+    font-family: Georgia, "Times New Roman", sans-serif;
+    font-size: 1em;
+    padding: 1em;
+    background-color: #FFFFFF;
+    border-top: solid 0.2em #110934; 
+    border-bottom: solid 0.2em #110934;
 }
 
 /* Style rule for footer */
 footer {
-	font-size: .70em;
-	text-align: center;
-	margin-top: 2em;
+    font-size: .70em;
+    text-align: center;
+    margin-top: 2em;
     color: #fff;
 }
 
 /* Media Query for Tablet Viewport */
-@media screen and (min-width: 481px), print {
+@media screen and (min-width: 600px), print {
     
     /* Tablet Viewport: Style rules for nav area */
+    nav ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
     nav li {
         display: inline-block;
         margin: 0.5%;
     }
     
     nav li a {
-        padding: 0.1em 1em;
+        padding: 0.5em 1em;
     }
     
 }
@@ -94,7 +94,18 @@ footer {
 /* Media Query for Desktop Viewport */
 @media screen and (min-width: 769px), print {
  
-    /* Desktop Viewport: Style rules for nav */
+    /* Desktop Viewport: Style rule for header */
+    /* For the header element when displayed in a desktop viewport */
+    header {
+        width: 25%;
+        float: left;
+    }
+
+    /* Align text to the right for unordered list elements within the nav element */
+    nav ul {
+        text-align: right;
+    }
+
     nav li {
         border-radius: 0;
     }
@@ -104,6 +115,12 @@ footer {
         padding: 0.7em;
     }
 
+    /* Style rule for nav li a when hovered */
+    nav li a:hover {
+        color: #4424d6;
+        background-color: #e5e0fa;
+    }
+
     /* Desktop Viewport: Style rules for the main content */
     main {
         border-style: none;
@@ -111,9 +128,27 @@ footer {
         overflow: auto;
     }
 
+    /* Style rule for col-content class selector */
+    .col-content {
+        width: 30%;
+        float: left;
+        padding: 1.5%;
+    }
+
     /* Desktop Viewport: Style rule for footer */
     footer {
         clear: left;
+    }
+
+}
+
+/* Media Query for Large Desktop Viewport */
+@media screen and (min-width: 1441px) {
+
+    /* Style rule for #container selector */
+    #container {
+        width: 1440px;
+        margin: 0 auto;
     }
 
 }
